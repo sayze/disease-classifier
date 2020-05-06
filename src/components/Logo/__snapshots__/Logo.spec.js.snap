@@ -20,7 +20,6 @@ exports[`Logo should render default Logo 1`] = `
             "render": [Function],
           }
         }
-        fontSize="large"
         viewBox="0 0 600 476.6"
       >
         <ForwardRef(SvgIcon)
@@ -43,18 +42,17 @@ exports[`Logo should render default Logo 1`] = `
               "render": [Function],
             }
           }
-          fontSize="large"
           viewBox="0 0 600 476.6"
         >
           <ForwardRef(SvgIcon)
             aria-hidden="true"
-            className="MuiSvgIcon-root MuiSvgIcon-fontSizeLarge"
+            className="MuiSvgIcon-root"
             focusable="false"
             viewBox="0 0 600 476.6"
           >
             <svg
               aria-hidden="true"
-              className="MuiSvgIcon-root MuiSvgIcon-fontSizeLarge"
+              className="MuiSvgIcon-root"
               focusable="false"
               viewBox="0 0 600 476.6"
             >
@@ -108,7 +106,7 @@ exports[`Logo should render default Logo 1`] = `
           <h6
             className="MuiTypography-root Logo-text-2 MuiTypography-h6"
           >
-            Late
+            Disease Classifier
           </h6>
         </ForwardRef(Typography)>
       </WithStyles(ForwardRef(Typography))>

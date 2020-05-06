@@ -1,9 +1,15 @@
 import React from 'react'
-import Sidebar from '.'
+import { withKnobs, select } from '@storybook/addon-knobs'
+import Sidebar, { Classifications } from '.'
 
 export default {
   title: 'Sidebar',
   component: Sidebar,
+  decorators: [withKnobs],
 }
 
-export const Default = () => <Sidebar />
+// Setup variables for select knob.
+const options = [Classifications.HYPEREXTENSION, Classifications.KIDNEY]
+const defaultValue = Classifications.HYPEREXTENSION
+
+export const Default = () => <Sidebar activeItem={select('Acive Item', options, defaultValue)} />
