@@ -1,5 +1,5 @@
 /**
- * Object containing constants that can safely be used across multiple components/pages.
+ * Object containing constants that can be consistently used across multiple components/pages.
  */
 export const Classifications = {
   HYPEREXTENSION: 'hyperextension',
