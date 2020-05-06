@@ -7,6 +7,10 @@ import { Classifications } from '.'
 const Sidebar = ({ onItemChange }) => {
   const [activeItem, setActiveItem] = useState(Classifications.HYPEREXTENSION)
 
+  /**
+   * Handle change events on list.
+   * @param {string} newItem 
+   */
   const handleItemChange = newItem => {
     setActiveItem(newItem)
     onItemChange(newItem)
