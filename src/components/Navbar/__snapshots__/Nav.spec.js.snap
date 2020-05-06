@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NavBar should render default NavBar 1`] = `
+<WithStyles(ForwardRef(AppBar))
+  elevation={1}
+  position="sticky"
+>
+  <WithStyles(ForwardRef(Toolbar))
+    variant="dense"
+  >
+    <WithStyles(Logo) />
+  </WithStyles(ForwardRef(Toolbar))>
+</WithStyles(ForwardRef(AppBar))>
+`;

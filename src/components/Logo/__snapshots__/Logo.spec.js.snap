@@ -1,0 +1,118 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Logo should render default Logo 1`] = `
+<WithStyles(Logo)>
+  <Logo
+    classes={
+      Object {
+        "root": "Logo-root-1",
+        "text": "Logo-text-2",
+      }
+    }
+  >
+    <div
+      className="Logo-root-1"
+    >
+      <WithStyles(ForwardRef(SvgIcon))
+        component={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "render": [Function],
+          }
+        }
+        fontSize="large"
+        viewBox="0 0 600 476.6"
+      >
+        <ForwardRef(SvgIcon)
+          classes={
+            Object {
+              "colorAction": "MuiSvgIcon-colorAction",
+              "colorDisabled": "MuiSvgIcon-colorDisabled",
+              "colorError": "MuiSvgIcon-colorError",
+              "colorPrimary": "MuiSvgIcon-colorPrimary",
+              "colorSecondary": "MuiSvgIcon-colorSecondary",
+              "fontSizeInherit": "MuiSvgIcon-fontSizeInherit",
+              "fontSizeLarge": "MuiSvgIcon-fontSizeLarge",
+              "fontSizeSmall": "MuiSvgIcon-fontSizeSmall",
+              "root": "MuiSvgIcon-root",
+            }
+          }
+          component={
+            Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "render": [Function],
+            }
+          }
+          fontSize="large"
+          viewBox="0 0 600 476.6"
+        >
+          <ForwardRef(SvgIcon)
+            aria-hidden="true"
+            className="MuiSvgIcon-root MuiSvgIcon-fontSizeLarge"
+            focusable="false"
+            viewBox="0 0 600 476.6"
+          >
+            <svg
+              aria-hidden="true"
+              className="MuiSvgIcon-root MuiSvgIcon-fontSizeLarge"
+              focusable="false"
+              viewBox="0 0 600 476.6"
+            >
+              icon.svg
+            </svg>
+          </ForwardRef(SvgIcon)>
+        </ForwardRef(SvgIcon)>
+      </WithStyles(ForwardRef(SvgIcon))>
+      <WithStyles(ForwardRef(Typography))
+        className="Logo-text-2"
+        variant="h6"
+      >
+        <ForwardRef(Typography)
+          className="Logo-text-2"
+          classes={
+            Object {
+              "alignCenter": "MuiTypography-alignCenter",
+              "alignJustify": "MuiTypography-alignJustify",
+              "alignLeft": "MuiTypography-alignLeft",
+              "alignRight": "MuiTypography-alignRight",
+              "body1": "MuiTypography-body1",
+              "body2": "MuiTypography-body2",
+              "button": "MuiTypography-button",
+              "caption": "MuiTypography-caption",
+              "colorError": "MuiTypography-colorError",
+              "colorInherit": "MuiTypography-colorInherit",
+              "colorPrimary": "MuiTypography-colorPrimary",
+              "colorSecondary": "MuiTypography-colorSecondary",
+              "colorTextPrimary": "MuiTypography-colorTextPrimary",
+              "colorTextSecondary": "MuiTypography-colorTextSecondary",
+              "displayBlock": "MuiTypography-displayBlock",
+              "displayInline": "MuiTypography-displayInline",
+              "gutterBottom": "MuiTypography-gutterBottom",
+              "h1": "MuiTypography-h1",
+              "h2": "MuiTypography-h2",
+              "h3": "MuiTypography-h3",
+              "h4": "MuiTypography-h4",
+              "h5": "MuiTypography-h5",
+              "h6": "MuiTypography-h6",
+              "noWrap": "MuiTypography-noWrap",
+              "overline": "MuiTypography-overline",
+              "paragraph": "MuiTypography-paragraph",
+              "root": "MuiTypography-root",
+              "srOnly": "MuiTypography-srOnly",
+              "subtitle1": "MuiTypography-subtitle1",
+              "subtitle2": "MuiTypography-subtitle2",
+            }
+          }
+          variant="h6"
+        >
+          <h6
+            className="MuiTypography-root Logo-text-2 MuiTypography-h6"
+          >
+            Late
+          </h6>
+        </ForwardRef(Typography)>
+      </WithStyles(ForwardRef(Typography))>
+    </div>
+  </Logo>
+</WithStyles(Logo)>
+`;
