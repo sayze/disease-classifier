@@ -14,7 +14,7 @@ const Sidebar = ({ onItemChange }) => {
 
     return (
         <Paper variant="outlined" >
-        <List component="nav" aria-label="main mailbox folders">
+        <List component="ul"  aria-label="main mailbox folders">
         <ListSubheader>Perform Classification</ListSubheader>
         <ListItem 
             button
