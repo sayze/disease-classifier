@@ -9,7 +9,7 @@ export default {
 }
 
 // Setup variables for select knob.
-const options = [Classifications.HYPEREXTENSION, Classifications.KIDNEY]
-const defaultValue = Classifications.HYPEREXTENSION
+const options = [Classifications.HYPERTENSION, Classifications.KIDNEY]
+const defaultValue = Classifications.HYPERTENSION
 
 export const Default = () => <Sidebar activeItem={select('Acive Item', options, defaultValue)} />

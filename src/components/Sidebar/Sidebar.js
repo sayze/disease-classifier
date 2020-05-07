@@ -1,6 +1,6 @@
 import React from 'react'
 import { Paper, List, ListItem, ListItemIcon, ListItemText, ListSubheader } from '@material-ui/core'
-import { FavoriteRounded, TurnedIn } from '@material-ui/icons'
+import { FavoriteRounded, EcoSharp } from '@material-ui/icons'
 import PropTypes from 'prop-types'
 import { Classifications } from '.'
 
@@ -10,8 +10,8 @@ const Sidebar = ({ activeItem, onItemChange }) => (
       <ListSubheader>Perform Classification</ListSubheader>
       <ListItem
         button
-        selected={activeItem === Classifications.HYPEREXTENSION}
-        onClick={() => onItemChange(Classifications.HYPEREXTENSION)}
+        selected={activeItem === Classifications.HYPERTENSION}
+        onClick={() => onItemChange(Classifications.HYPERTENSION)}
       >
         <ListItemIcon>
           <FavoriteRounded />
@@ -24,7 +24,7 @@ const Sidebar = ({ activeItem, onItemChange }) => (
         onClick={() => onItemChange(Classifications.KIDNEY)}
       >
         <ListItemIcon>
-          <TurnedIn />
+          <EcoSharp />
         </ListItemIcon>
         <ListItemText primary="Classify Kidney Disease" />
       </ListItem>

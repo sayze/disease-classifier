@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Sidebar should render Sidebar with hypertension active 1`] = `
+<WithStyles(ForwardRef(Paper))
+  variant="outlined"
+>
+  <WithStyles(ForwardRef(List))
+    aria-label="main mailbox folders"
+    component="ul"
+  >
+    <WithStyles(ForwardRef(ListSubheader))>
+      Perform Classification
+    </WithStyles(ForwardRef(ListSubheader))>
+    <WithStyles(ForwardRef(ListItem))
+      button={true}
+      onClick={[Function]}
+      selected={true}
+    >
+      <WithStyles(ForwardRef(ListItemIcon))>
+        <FavoriteRoundedIcon />
+      </WithStyles(ForwardRef(ListItemIcon))>
+      <WithStyles(ForwardRef(ListItemText))
+        primary="Classify Hypertension"
+      />
+    </WithStyles(ForwardRef(ListItem))>
+    <WithStyles(ForwardRef(ListItem))
+      button={true}
+      onClick={[Function]}
+      selected={false}
+    >
+      <WithStyles(ForwardRef(ListItemIcon))>
+        <EcoSharpIcon />
+      </WithStyles(ForwardRef(ListItemIcon))>
+      <WithStyles(ForwardRef(ListItemText))
+        primary="Classify Kidney Disease"
+      />
+    </WithStyles(ForwardRef(ListItem))>
+  </WithStyles(ForwardRef(List))>
+</WithStyles(ForwardRef(Paper))>
+`;
