@@ -5,10 +5,18 @@ import Stage from 'services/Hypertension'
 
 const HypeSummary = ({ date, sysBp, dialBp, stage }) => (
   <>
-    <Typography component="span">{date}</Typography>
-    <Typography component="span">{sysBp}</Typography>
-    <Typography component="span">{dialBp}</Typography>
-    <Typography component="span">{stage.toString()}</Typography>
+    <Typography variant="h6" component="h6">
+      {date}
+    </Typography>
+    <Typography variant="body2" component="p">
+      {sysBp}
+    </Typography>
+    <Typography variant="body2" component="p">
+      {dialBp}
+    </Typography>
+    <Typography variant="body2" component="p">
+      {stage.toString()}
+    </Typography>
   </>
 )
 
