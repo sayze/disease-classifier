@@ -3,7 +3,7 @@
 An application to assist doctors with classifying patients for Hypertension and Kidney Disease.
 
 ## Prerequisites
-* nodejs >= v13
+* nodejs >= v10
 * yarn >= v1.22
 
 ## Install
