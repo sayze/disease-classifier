@@ -1,7 +1,7 @@
 import React from 'react'
 import HypeSummary from '.'
 import { classify } from 'services/Hypertension'
-import { withKnobs, number, select } from '@storybook/addon-knobs'
+import { withKnobs, number } from '@storybook/addon-knobs'
 
 export default {
   title: 'HyperSummary',
