@@ -1,9 +1,10 @@
 import React from 'react'
-import HypeForm from '.'
+import HypeSummary from '.'
+import { stages } from 'services/Hypertension'
 
 export default {
-  title: 'HypeForm',
-  component: HypeForm,
+  title: 'HyperSummary',
+  component: HypeSummary,
 }
 
-export const Default = () => <HypeForm />
+export const Default = () => <HypeSummary stage={stages.STAGE_1} />

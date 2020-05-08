@@ -1,10 +1,11 @@
 import React from 'react'
 import { shallow } from 'enzyme'
-import HypeForm from '.'
+import HypeSummary from '.'
+import { stages } from 'services/Hypertension'
 
-describe('HypeForm', () => {
-  it('should render a default hypertension form', () => {
-    const component = shallow(<HypeForm />)
+describe('HypeSummary', () => {
+  it('should render a valid hypertension summary', () => {
+    const component = shallow(<HypeSummary stage={stages.STAGE_3} />)
     expect(component).toMatchSnapshot()
   })
 })

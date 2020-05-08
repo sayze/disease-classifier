@@ -16,12 +16,12 @@ export default class Stage {
  * Dictionary to keep track of all the possible stages.
  * @type {{STAGE_2: *, STAGE_1: *, STAGE_3: *, STAGE_0: *}}
  */
-export const stages = {
+export const stages = Object.freeze({
   STAGE_0: new Stage('hype-s0', 'No Hypertension'),
   STAGE_1: new Stage('hype-s1', 'Stage 1'),
   STAGE_2: new Stage('hype-s2', 'Stage 2'),
   STAGE_3: new Stage('hype-s3', 'Stage 3'),
-}
+})
 
 /**
  * Factory to derive the appropriate stage given blood pressure parameters.

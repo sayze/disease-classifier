@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HypeSummary should render a valid hypertension summary 1`] = `
+<Fragment>
+  <WithStyles(ForwardRef(Typography))
+    component="span"
+  >
+    Fri May 08 2020
+  </WithStyles(ForwardRef(Typography))>
+  <WithStyles(ForwardRef(Typography))
+    component="span"
+  >
+    0
+  </WithStyles(ForwardRef(Typography))>
+  <WithStyles(ForwardRef(Typography))
+    component="span"
+  >
+    0
+  </WithStyles(ForwardRef(Typography))>
+  <WithStyles(ForwardRef(Typography))
+    component="span"
+  >
+    Stage 3
+  </WithStyles(ForwardRef(Typography))>
+</Fragment>
+`;

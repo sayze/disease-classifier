@@ -1,1 +1,1 @@
-export { default } from './HypeForm'
+export { default } from './HypeSummary'
