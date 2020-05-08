@@ -6,7 +6,7 @@ import Stage from 'services/Hypertension'
 
 const useStyles = makeStyles(theme => ({
   resultLabel: {
-    backgroundColor: theme.palette.grey[100],
+    backgroundColor: theme.palette.grey[50],
   },
 }))
 
