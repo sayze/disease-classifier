@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Grid, Typography, Divider } from '@material-ui/core'
 import { Alert, AlertTitle } from '@material-ui/lab'
-import HypeForm from 'components/HypeForm'
+import HypeForm from 'components/Form'
 import HypeSummary from 'components/HypeSummary'
 import { stages, classify } from 'services/Hypertension'
 

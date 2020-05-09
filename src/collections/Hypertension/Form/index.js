@@ -1,5 +1,5 @@
 import React from 'react'
-import { Form, Formik } from 'formik'
+import { Form as FormikForm, Formik } from 'formik'
 import * as Yup from 'yup'
 import { Button, TextField } from '@material-ui/core'
 import PropTypes from 'prop-types'
@@ -11,7 +11,7 @@ const useStyles = makeStyles(theme => ({
   },
 }))
 
-const HypeForm = ({ onFormSubmit }) => {
+const Form = ({ onFormSubmit }) => {
   const classes = useStyles()
   return (
     <Formik
@@ -27,7 +27,7 @@ const HypeForm = ({ onFormSubmit }) => {
       onSubmit={onFormSubmit}
     >
       {({ errors, touched, values, handleChange }) => (
-        <Form>
+        <FormikForm>
           <TextField
             fullWidth
             autoFocus
@@ -54,22 +54,22 @@ const HypeForm = ({ onFormSubmit }) => {
           <Button variant="contained" size="small" type="submit" color="primary" fullWidth>
             Classify
           </Button>
-        </Form>
+        </FormikForm>
       )}
     </Formik>
   )
 }
 
-HypeForm.defaultProps = {
+Form.defaultProps = {
   sysBp: 0,
   dialBp: 0,
   onFormSubmit: () => {},
 }
 
-HypeForm.propTypes = {
+Form.propTypes = {
   sysBp: PropTypes.number,
   dialBp: PropTypes.number,
   onFormSubmit: PropTypes.func,
 }
 
-export default HypeForm
+export default Form

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`HypeForm should render a default hypertension form 1`] = `
+exports[`Hypertension Form should render a default hypertension form 1`] = `
 <Formik
   enableReinitialize={false}
   initialValues={

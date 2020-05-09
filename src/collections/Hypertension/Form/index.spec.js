@@ -1,10 +1,10 @@
 import React from 'react'
 import { shallow } from 'enzyme'
-import HypeForm from '.'
+import Form from '.'
 
-describe('HypeForm', () => {
+describe('Hypertension Form', () => {
   it('should render a default hypertension form', () => {
-    const component = shallow(<HypeForm />)
+    const component = shallow(<Form />)
     expect(component).toMatchSnapshot()
   })
 })
