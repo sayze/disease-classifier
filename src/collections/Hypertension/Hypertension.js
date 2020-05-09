@@ -30,7 +30,7 @@ const Hypertension = () => {
   }
 
   return (
-    <Grid style={{ padding: '1rem' }} container direction="column" spacing={2}>
+    <Grid container direction="column" spacing={2}>
       <Grid item xs>
         <Typography component="p" color="textSecondary" variant="body1">
           Classify Hypertension
