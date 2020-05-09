@@ -36,9 +36,9 @@ const Form = ({ onFormSubmit }) => {
             variant="outlined"
             label="Systolic Blood Pressure"
             error={Boolean(touched.sysBp && errors.sysBp)}
-            helperText={errors.sysBp && touched.sysBp ? errors.sysBp : ' '}
+            helperText={errors.sysBp && touched.sysBp ? errors.sysBp : 'Number for Systolic Blood Pressure'}
             onChange={handleChange}
-            placeholder="Systolic Blood Pressure"
+            defaultValue={values.sysBp}
           />
           <TextField
             fullWidth
@@ -47,9 +47,9 @@ const Form = ({ onFormSubmit }) => {
             variant="outlined"
             label="Diastolic Blood Pressure"
             error={Boolean(touched.dialBp && errors.dialBp)}
-            helperText={errors.dialBp && touched.dialBp ? errors.dialBp : ' '}
+            helperText={errors.dialBp && touched.dialBp ? errors.dialBp : 'Number for Diastolic Blood Pressure'}
             onChange={handleChange}
-            placeholder="Diastolic Blood Pressure"
+            defaultValue={values.dialBp}
           />
           <Button variant="contained" type="submit" color="primary" fullWidth>
             Classify
