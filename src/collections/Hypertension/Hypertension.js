@@ -37,7 +37,7 @@ const Hypertension = () => {
       <Grid item container spacing={2} direction="column">
         <Grid item xs>
           <Typography component="p" color="textSecondary" variant="body1">
-            Results
+            Classification
           </Typography>
         </Grid>
         <Grid item xs>
