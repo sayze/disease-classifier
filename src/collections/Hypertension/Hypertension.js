@@ -30,28 +30,22 @@ const Hypertension = () => {
   }
 
   return (
-    <Grid container direction="column" spacing={2}>
-      <Grid item xs>
-        <Typography component="p" color="textSecondary" variant="body1">
-          Classify Hypertension
-        </Typography>
-      </Grid>
+    <Grid container spacing={4} direction="column">
       <Grid item xs>
         <Form onFormSubmit={handleFormSubmit} />
       </Grid>
-      <Grid item xs>
-        <Divider />
-      </Grid>
-      <Grid item xs>
-        <Typography component="p" color="textSecondary" variant="body1">
-          Results
-        </Typography>
-      </Grid>
-      <Grid item xs>
-        <Alert severity={getSeverity(stage)}>
-          <AlertTitle>{stage.toString()}</AlertTitle>
-          <Summary {...bpValues} />
-        </Alert>
+      <Grid item container spacing={2} direction="column">
+        <Grid item xs>
+          <Typography component="p" color="textSecondary" variant="body1">
+            Results
+          </Typography>
+        </Grid>
+        <Grid item xs>
+          <Alert severity={getSeverity(stage)}>
+            <AlertTitle>{stage.toString()}</AlertTitle>
+            <Summary {...bpValues} />
+          </Alert>
+        </Grid>
       </Grid>
     </Grid>
   )
