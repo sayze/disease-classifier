@@ -2,7 +2,7 @@ import React from 'react'
 import { Typography, Grid } from '@material-ui/core'
 import PropTypes from 'prop-types'
 
-const HypeSummary = ({ date, sysBp, dialBp }) => (
+const Summary = ({ date, sysBp, dialBp }) => (
   <Grid container direction="column" spacing={1}>
     <Grid item>
       <Typography variant="body1" component="p">
@@ -22,16 +22,16 @@ const HypeSummary = ({ date, sysBp, dialBp }) => (
   </Grid>
 )
 
-HypeSummary.defaultProps = {
+Summary.defaultProps = {
   date: new Date().toDateString(),
   sysBp: 0,
   dialBp: 0,
 }
 
-HypeSummary.propTypes = {
+Summary.propTypes = {
   date: PropTypes.string,
   sysBp: PropTypes.number,
   dialBp: PropTypes.number,
 }
 
-export default HypeSummary
+export default Summary

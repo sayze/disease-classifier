@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
 import { Grid, Typography, Divider } from '@material-ui/core'
 import { Alert, AlertTitle } from '@material-ui/lab'
-import HypeForm from 'components/Form'
-import HypeSummary from 'components/HypeSummary'
+import { Form, Summary } from '.'
 import { stages, classify } from 'services/Hypertension'
 
 /**
@@ -38,7 +37,7 @@ const Hypertension = () => {
         </Typography>
       </Grid>
       <Grid item xs>
-        <HypeForm onFormSubmit={handleFormSubmit} />
+        <Form onFormSubmit={handleFormSubmit} />
       </Grid>
       <Grid item xs>
         <Divider />
@@ -51,7 +50,7 @@ const Hypertension = () => {
       <Grid item xs>
         <Alert severity={getSeverity(stage)}>
           <AlertTitle>{stage.toString()}</AlertTitle>
-          <HypeSummary {...bpValues} />
+          <Summary {...bpValues} />
         </Alert>
       </Grid>
     </Grid>
