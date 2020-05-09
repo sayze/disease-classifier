@@ -30,6 +30,7 @@ const HypeForm = ({ sysBp, dialBp, onFormSubmit }) => {
         <Form>
           <TextField
             fullWidth
+            size="medium"
             className={classes.inputField}
             name="sysBp"
             variant="outlined"
@@ -52,7 +53,7 @@ const HypeForm = ({ sysBp, dialBp, onFormSubmit }) => {
             onChange={handleChange}
             defaultValue={values.dialBp}
           />
-          <Button variant="contained" type="submit" color="primary" fullWidth>
+          <Button variant="contained" size="small" type="submit" color="primary" fullWidth>
             Classify
           </Button>
         </Form>
