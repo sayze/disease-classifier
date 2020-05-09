@@ -51,7 +51,7 @@ const Form = ({ onFormSubmit }) => {
             onChange={handleChange}
             placeholder="Diastolic Blood Pressure"
           />
-          <Button variant="contained" size="small" type="submit" color="primary" fullWidth>
+          <Button variant="contained" type="submit" color="primary" fullWidth>
             Classify
           </Button>
         </FormikForm>
