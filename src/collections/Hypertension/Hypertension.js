@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Grid, Typography, Divider } from '@material-ui/core'
+import { Grid, Typography } from '@material-ui/core'
 import { Alert, AlertTitle } from '@material-ui/lab'
 import { Form, Summary } from '.'
 import { stages, classify } from 'services/Hypertension'
