@@ -11,11 +11,11 @@ const useStyles = makeStyles(theme => ({
   },
 }))
 
-const HypeForm = ({ sysBp, dialBp, onFormSubmit }) => {
+const HypeForm = ({ onFormSubmit }) => {
   const classes = useStyles()
   return (
     <Formik
-      initialValues={{ sysBp, dialBp }}
+      initialValues={{ dialBp: 0, sysBp: 0 }}
       validationSchema={Yup.object({
         sysBp: Yup.number()
           .typeError('Systolic Blood Pressure must be a number')
@@ -30,28 +30,26 @@ const HypeForm = ({ sysBp, dialBp, onFormSubmit }) => {
         <Form>
           <TextField
             fullWidth
-            size="medium"
+            autoFocus
             className={classes.inputField}
             name="sysBp"
             variant="outlined"
-            label="Systolic BP"
+            label="Systolic Blood Pressure"
             error={Boolean(touched.sysBp && errors.sysBp)}
-            helperText={errors.sysBp && touched.sysBp ? errors.sysBp : 'Number to represent Systolic Blood Pressure'}
+            helperText={errors.sysBp && touched.sysBp ? errors.sysBp : ' '}
             onChange={handleChange}
-            defaultValue={values.sysBp}
+            placeholder="Systolic Blood Pressure"
           />
           <TextField
             fullWidth
             className={classes.inputField}
             name="dialBp"
             variant="outlined"
-            label="Diastolic BP"
+            label="Diastolic Blood Pressure"
             error={Boolean(touched.dialBp && errors.dialBp)}
-            helperText={
-              errors.dialBp && touched.dialBp ? errors.dialBp : 'Number to represent Diastolic Blood Pressure'
-            }
+            helperText={errors.dialBp && touched.dialBp ? errors.dialBp : ' '}
             onChange={handleChange}
-            defaultValue={values.dialBp}
+            placeholder="Diastolic Blood Pressure"
           />
           <Button variant="contained" size="small" type="submit" color="primary" fullWidth>
             Classify

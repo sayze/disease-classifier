@@ -1,6 +1,5 @@
 import React from 'react'
 import HypeSummary from '.'
-import { classify } from 'services/Hypertension'
 import { withKnobs, number } from '@storybook/addon-knobs'
 
 export default {
@@ -11,5 +10,5 @@ export default {
 export const Default = () => {
   const dialBp = number('Diastolic Blood Pressure', 0)
   const sysBp = number('Systolic Blood Pressure', 0)
-  return <HypeSummary date="21/05/2020" dialBp={dialBp} sysBp={sysBp} stage={classify(sysBp, dialBp)} />
+  return <HypeSummary date="21/05/2020" dialBp={dialBp} sysBp={sysBp} />
 }

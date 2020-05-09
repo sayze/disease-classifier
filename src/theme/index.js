@@ -5,7 +5,7 @@ export default createMuiTheme({
     primary: { main: '#4E5C89' },
   },
   typography: {
-    fontSize: 14,
+    fontSize: 13,
     fontFamily: [
       '-apple-system',
       'BlinkMacSystemFont',

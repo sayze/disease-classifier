@@ -4,7 +4,7 @@ exports[`HypeSummary should render a valid hypertension summary 1`] = `
 <WithStyles(ForwardRef(Grid))
   container={true}
   direction="column"
-  spacing={2}
+  spacing={1}
 >
   <WithStyles(ForwardRef(Grid))
     item={true}
@@ -13,7 +13,8 @@ exports[`HypeSummary should render a valid hypertension summary 1`] = `
       component="p"
       variant="body1"
     >
-      Fri May 08 2020
+      Reading Date: 
+      Wed Jan 01 2020
     </WithStyles(ForwardRef(Typography))>
   </WithStyles(ForwardRef(Grid))>
   <WithStyles(ForwardRef(Grid))
@@ -36,18 +37,6 @@ exports[`HypeSummary should render a valid hypertension summary 1`] = `
     >
       Diastolic Blood Pressure: 
       0
-    </WithStyles(ForwardRef(Typography))>
-  </WithStyles(ForwardRef(Grid))>
-  <WithStyles(ForwardRef(Grid))
-    item={true}
-  >
-    <WithStyles(ForwardRef(Typography))
-      className="makeStyles-resultLabel-1"
-      component="h6"
-      variant="h6"
-    >
-      Results: 
-      Stage 3
     </WithStyles(ForwardRef(Typography))>
   </WithStyles(ForwardRef(Grid))>
 </WithStyles(ForwardRef(Grid))>
