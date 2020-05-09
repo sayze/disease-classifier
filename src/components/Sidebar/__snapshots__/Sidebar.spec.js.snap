@@ -20,7 +20,7 @@ exports[`Sidebar should render Sidebar with hypertension active 1`] = `
         <FavoriteRoundedIcon />
       </WithStyles(ForwardRef(ListItemIcon))>
       <WithStyles(ForwardRef(ListItemText))
-        primary="Classify Hypertension"
+        primary="Hypertension"
       />
     </WithStyles(ForwardRef(ListItem))>
     <WithStyles(ForwardRef(ListItem))
@@ -32,7 +32,7 @@ exports[`Sidebar should render Sidebar with hypertension active 1`] = `
         <EcoSharpIcon />
       </WithStyles(ForwardRef(ListItemIcon))>
       <WithStyles(ForwardRef(ListItemText))
-        primary="Classify Kidney Disease"
+        primary="Kidney Disease"
       />
     </WithStyles(ForwardRef(ListItem))>
   </WithStyles(ForwardRef(List))>

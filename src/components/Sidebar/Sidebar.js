@@ -16,7 +16,7 @@ const Sidebar = ({ activeItem, onItemChange }) => (
         <ListItemIcon>
           <FavoriteRounded />
         </ListItemIcon>
-        <ListItemText primary="Classify Hypertension" />
+        <ListItemText primary="Hypertension" />
       </ListItem>
       <ListItem
         button
@@ -26,7 +26,7 @@ const Sidebar = ({ activeItem, onItemChange }) => (
         <ListItemIcon>
           <EcoSharp />
         </ListItemIcon>
-        <ListItemText primary="Classify Kidney Disease" />
+        <ListItemText primary="Kidney Disease" />
       </ListItem>
     </List>
   </Paper>
