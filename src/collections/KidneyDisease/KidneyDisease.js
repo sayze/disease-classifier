@@ -12,8 +12,8 @@ import { classifyKidneyDisease, readings, getPercentageDrop } from 'services/Cla
 const getSeverity = eGFR => {
   switch (eGFR) {
     case readings.MILD_DECREASE:
-    case readings.MILD_MODERATE:
-    case readings.MODERATE_SEVERE:
+    case readings.MILD_TO_MODERATE:
+    case readings.MODERATE_TO_SEVERE:
       return 'warning'
     case readings.SEVERE_DECREASE:
     case readings.SEVERE:

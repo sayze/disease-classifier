@@ -13,15 +13,15 @@ describe('Kidney Disease Service', () => {
   })
 
   it('should classifyKidneyDisease as mild to moderate', () => {
-    expect(classifyKidneyDisease(45)).toEqual(readings.MILD_MODERATE)
-    expect(classifyKidneyDisease(50)).toEqual(readings.MILD_MODERATE)
-    expect(classifyKidneyDisease(59)).toEqual(readings.MILD_MODERATE)
+    expect(classifyKidneyDisease(45)).toEqual(readings.MILD_TO_MODERATE)
+    expect(classifyKidneyDisease(50)).toEqual(readings.MILD_TO_MODERATE)
+    expect(classifyKidneyDisease(59)).toEqual(readings.MILD_TO_MODERATE)
   })
 
   it('should classifyKidneyDisease as moderate to severe', () => {
-    expect(classifyKidneyDisease(30)).toEqual(readings.MODERATE_SEVERE)
-    expect(classifyKidneyDisease(34)).toEqual(readings.MODERATE_SEVERE)
-    expect(classifyKidneyDisease(44)).toEqual(readings.MODERATE_SEVERE)
+    expect(classifyKidneyDisease(30)).toEqual(readings.MODERATE_TO_SEVERE)
+    expect(classifyKidneyDisease(34)).toEqual(readings.MODERATE_TO_SEVERE)
+    expect(classifyKidneyDisease(44)).toEqual(readings.MODERATE_TO_SEVERE)
   })
 
   it('should classifyKidneyDisease as severely decreased', () => {

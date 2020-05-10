@@ -22,7 +22,7 @@ const Form = ({ onFormSubmit }) => {
   const classes = useStyles()
   return (
     <Formik
-      initialValues={{ dialBp: 0, sysBp: 0, date: new Date() }}
+      initialValues={{ dialBp: 0, sysBp: 0 }}
       validationSchema={Yup.object({
         sysBp: Yup.number()
           .typeError('Systolic Blood Pressure must be a number')

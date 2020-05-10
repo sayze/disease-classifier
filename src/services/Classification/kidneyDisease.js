@@ -6,8 +6,8 @@ import Classification from '.'
 export const readings = Object.freeze({
   NORMAL: new Classification('kid-norm', 'Normal'),
   MILD_DECREASE: new Classification('kid-mild-dec', 'Mildly Decreased'),
-  MILD_MODERATE: new Classification('kid-mild-mod', 'Mild to Moderate'),
-  MODERATE_SEVERE: new Classification('kid-mod-severe', 'Moderate to Severe'),
+  MILD_TO_MODERATE: new Classification('kid-mild-mod', 'Mild to Moderate'),
+  MODERATE_TO_SEVERE: new Classification('kid-mod-severe', 'Moderate to Severe'),
   SEVERE_DECREASE: new Classification('kid-severe-dec', 'Severely Decreased'),
   SEVERE: new Classification('kid-severe', 'Kidney Failure'),
 })
@@ -27,11 +27,11 @@ export function classifyKidneyDisease(eGFR = 0) {
   }
 
   if (eGFR >= 45 && eGFR <= 59) {
-    return readings.MILD_MODERATE
+    return readings.MILD_TO_MODERATE
   }
 
   if (eGFR >= 30 && eGFR <= 44) {
-    return readings.MODERATE_SEVERE
+    return readings.MODERATE_TO_SEVERE
   }
 
   if (eGFR >= 15 && eGFR <= 29) {
