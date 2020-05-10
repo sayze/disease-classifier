@@ -4,7 +4,7 @@ An application to assist doctors with classifying patients for Hypertension and 
 
 ## Prerequisites
 * nodejs >= v10
-* yarn >= v1.22
+* yarn >= v1.17
 
 ## Install
 
