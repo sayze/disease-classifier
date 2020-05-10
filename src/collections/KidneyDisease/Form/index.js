@@ -4,6 +4,7 @@ import * as Yup from 'yup'
 import { Button, TextField } from '@material-ui/core'
 import PropTypes from 'prop-types'
 import { makeStyles } from '@material-ui/core/styles'
+import Datepicker from 'components/Datepicker'
 
 const useStyles = makeStyles(theme => ({
   inputField: {
@@ -23,8 +24,17 @@ const Form = ({ onFormSubmit }) => {
       })}
       onSubmit={onFormSubmit}
     >
-      {({ errors, touched, values, handleChange, handleSubmit }) => (
+      {({ errors, touched, values, handleChange, handleSubmit, setFieldValue }) => (
         <>
+          <Datepicker
+            fullWidth
+            autoFocus
+            name="date"
+            onChange={date => setFieldValue('date', date)}
+            className={classes.inputField}
+            value={values.date}
+            label="Date of Reading"
+          />
           <TextField
             fullWidth
             autoFocus

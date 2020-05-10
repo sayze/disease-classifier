@@ -63,7 +63,7 @@ const KidneyDisease = () => {
 
     // Update previous and current states.
     seteGFRPrev({ ...eGFRCurr })
-    seteGFRCurr({ value: eGFRValue, date: new Date() })
+    seteGFRCurr({ value: eGFRValue, date: values.date })
   }
 
   return (
