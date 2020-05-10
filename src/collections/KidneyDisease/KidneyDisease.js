@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Grid, Typography, Divider } from '@material-ui/core'
 import { Alert, AlertTitle } from '@material-ui/lab'
 import { Form, Summary } from '.'
-import { classifyKidneyDisease, readings, getPercentageDrop } from 'services/Classifications'
+import { classifyKidneyDisease, readings, getPercentageDrop } from 'services/Classification'
 
 /**
  * Get the severity level using the provided KidneyDisease classification.
