@@ -2,6 +2,11 @@
 
 exports[`Sidebar should render Sidebar with hypertension active 1`] = `
 <WithStyles(ForwardRef(Paper))
+  style={
+    Object {
+      "height": "100%",
+    }
+  }
   variant="outlined"
 >
   <WithStyles(ForwardRef(List))

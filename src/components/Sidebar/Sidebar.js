@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import { menu } from '.'
 
 const Sidebar = ({ activeItem, onItemChange }) => (
-  <Paper variant="outlined">
+  <Paper variant="outlined" style={{ height: '100%' }}>
     <List component="ul" aria-label="main mailbox folders">
       <ListSubheader>Perform Classification</ListSubheader>
       <ListItem button selected={activeItem === menu.HYPERTENSION} onClick={() => onItemChange(menu.HYPERTENSION)}>
