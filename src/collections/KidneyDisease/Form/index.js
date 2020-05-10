@@ -7,8 +7,15 @@ import { makeStyles } from '@material-ui/core/styles'
 import Datepicker from 'components/Datepicker'
 
 const useStyles = makeStyles(theme => ({
+  inputs: {
+    display: 'flex',
+  },
   inputField: {
     marginBottom: theme.spacing(3),
+    marginRight: theme.spacing(3),
+  },
+  submit: {
+    float: 'right',
   },
 }))
 
@@ -26,28 +33,29 @@ const Form = ({ onFormSubmit }) => {
     >
       {({ errors, touched, values, handleChange, handleSubmit, setFieldValue }) => (
         <>
-          <Datepicker
-            fullWidth
-            autoFocus
-            name="date"
-            onChange={date => setFieldValue('date', date)}
-            className={classes.inputField}
-            value={values.date}
-            label="Date of Reading"
-          />
-          <TextField
-            fullWidth
-            autoFocus
-            className={classes.inputField}
-            name="eGFR"
-            variant="outlined"
-            label="eGFR"
-            error={Boolean(touched.eGFR && errors.eGFR)}
-            helperText={errors.eGFR && touched.eGFR ? errors.eGFR : 'Number for eGFR'}
-            onChange={handleChange}
-            defaultValue={values.eGFR}
-          />
-          <Button variant="contained" onClick={handleSubmit} color="primary" fullWidth>
+          <div className={classes.inputs}>
+            <Datepicker
+              autoFocus
+              name="date"
+              onChange={date => setFieldValue('date', date)}
+              className={classes.inputField}
+              value={values.date}
+              label="Date of Reading"
+            />
+            <TextField
+              margin="normal"
+              autoFocus
+              className={classes.inputField}
+              name="eGFR"
+              variant="outlined"
+              label="eGFR"
+              error={Boolean(touched.eGFR && errors.eGFR)}
+              helperText={errors.eGFR && touched.eGFR ? errors.eGFR : 'Number for eGFR'}
+              onChange={handleChange}
+              defaultValue={values.eGFR}
+            />
+          </div>
+          <Button className={classes.submit} variant="contained" onClick={handleSubmit} color="primary">
             Classify
           </Button>
         </>
