@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Kidney Disease Summary should render a valid kidney disease summary 1`] = `
+<WithStyles(ForwardRef(Grid))
+  container={true}
+  direction="column"
+  spacing={1}
+>
+  <WithStyles(ForwardRef(Grid))
+    item={true}
+  >
+    <WithStyles(ForwardRef(Typography))
+      component="p"
+      variant="body1"
+    >
+      Reading Date: 
+      Wed Jan 01 2020
+    </WithStyles(ForwardRef(Typography))>
+  </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Grid))
+    item={true}
+  >
+    <WithStyles(ForwardRef(Typography))
+      component="p"
+      variant="body1"
+    >
+      eGFR: 
+      0
+    </WithStyles(ForwardRef(Typography))>
+  </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Grid))
+    item={true}
+  >
+    <WithStyles(ForwardRef(Typography))
+      component="p"
+      variant="body1"
+    >
+      Percent Change: 
+      0
+      %
+    </WithStyles(ForwardRef(Typography))>
+  </WithStyles(ForwardRef(Grid))>
+</WithStyles(ForwardRef(Grid))>
+`;

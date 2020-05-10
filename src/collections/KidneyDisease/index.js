@@ -1,3 +1,3 @@
-// export { default } from './Hypertension'
+export { default } from './KidneyDisease'
 export { default as Form } from './Form'
-// export { default as Summary } from './Summary'
+export { default as Summary } from './Summary'
