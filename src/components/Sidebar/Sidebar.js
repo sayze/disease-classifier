@@ -2,27 +2,19 @@ import React from 'react'
 import { Paper, List, ListItem, ListItemIcon, ListItemText, ListSubheader } from '@material-ui/core'
 import { FavoriteRounded, EcoSharp } from '@material-ui/icons'
 import PropTypes from 'prop-types'
-import { Classifications } from '.'
+import { menu } from '.'
 
 const Sidebar = ({ activeItem, onItemChange }) => (
   <Paper variant="outlined">
     <List component="ul" aria-label="main mailbox folders">
       <ListSubheader>Perform Classification</ListSubheader>
-      <ListItem
-        button
-        selected={activeItem === Classifications.HYPERTENSION}
-        onClick={() => onItemChange(Classifications.HYPERTENSION)}
-      >
+      <ListItem button selected={activeItem === menu.HYPERTENSION} onClick={() => onItemChange(menu.HYPERTENSION)}>
         <ListItemIcon>
           <FavoriteRounded />
         </ListItemIcon>
         <ListItemText primary="Hypertension" />
       </ListItem>
-      <ListItem
-        button
-        selected={activeItem === Classifications.KIDNEY}
-        onClick={() => onItemChange(Classifications.KIDNEY)}
-      >
+      <ListItem button selected={activeItem === menu.KIDNEY} onClick={() => onItemChange(menu.KIDNEY)}>
         <ListItemIcon>
           <EcoSharp />
         </ListItemIcon>

@@ -1,7 +1,7 @@
 /**
  * Object containing constants that can be consistently used across multiple components/pages.
  */
-export const Classifications = {
+export const menu = {
   HYPERTENSION: 'hypertension',
   KIDNEY: 'kidney',
 }

@@ -33,7 +33,7 @@ const renderSummary = (eGFRPrev = {}, eGFRCurr = {}) => {
   const percentDrop = getPercentageDrop(eGFRPrev.value, eGFRCurr.value)
   const title =
     percentDrop >= 20
-      ? `${classification.toString()} (current eGFR has declined 20% or more than the previous reading, refer to below readings)`
+      ? `${classification.toString()} (eGFR has declined 20% than the previous reading, refer to below readings)`
       : classification.toString()
 
   return (

@@ -26,7 +26,7 @@ const Form = ({ onFormSubmit }) => {
       })}
       onSubmit={onFormSubmit}
     >
-      {({ errors, touched, values, handleChange }) => (
+      {({ errors, touched, values, handleChange, handleSubmit }) => (
         <>
           <TextField
             fullWidth
@@ -51,7 +51,7 @@ const Form = ({ onFormSubmit }) => {
             onChange={handleChange}
             defaultValue={values.dialBp}
           />
-          <Button variant="contained" type="submit" color="primary" fullWidth>
+          <Button variant="contained" onClick={handleSubmit} color="primary" fullWidth>
             Classify
           </Button>
         </>
