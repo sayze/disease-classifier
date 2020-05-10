@@ -10,5 +10,5 @@ export default {
 export const Default = () => {
   const eGFR = number('eGFR', 0)
   const percentage = number('Percentage', 0)
-  return <Summary date="21/05/2020" eGFR={eGFR} percentage={percentage} />
+  return <Summary eGFR={eGFR} percentage={percentage} />
 }

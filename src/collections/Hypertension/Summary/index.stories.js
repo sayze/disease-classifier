@@ -10,5 +10,5 @@ export default {
 export const Default = () => {
   const dialBp = number('Diastolic Blood Pressure', 0)
   const sysBp = number('Systolic Blood Pressure', 0)
-  return <Summary date="21/05/2020" dialBp={dialBp} sysBp={sysBp} />
+  return <Summary dialBp={dialBp} sysBp={sysBp} />
 }

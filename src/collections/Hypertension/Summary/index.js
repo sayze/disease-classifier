@@ -1,12 +1,13 @@
 import React from 'react'
 import { Typography, Grid } from '@material-ui/core'
 import PropTypes from 'prop-types'
+import dateWithFormat from 'services/Date'
 
 const Summary = ({ date, sysBp, dialBp }) => (
   <Grid container direction="column" spacing={1}>
     <Grid item>
       <Typography variant="body1" component="p">
-        Reading Date: {date}
+        Reading Date: {dateWithFormat(date)}
       </Typography>
     </Grid>
     <Grid item>
@@ -23,13 +24,13 @@ const Summary = ({ date, sysBp, dialBp }) => (
 )
 
 Summary.defaultProps = {
-  date: new Date().toDateString(),
+  date: new Date(),
   sysBp: 0,
   dialBp: 0,
 }
 
 Summary.propTypes = {
-  date: PropTypes.string,
+  date: PropTypes.object,
   sysBp: PropTypes.number,
   dialBp: PropTypes.number,
 }

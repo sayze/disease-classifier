@@ -14,7 +14,7 @@ exports[`Kidney Disease Summary should render a valid kidney disease summary 1`]
       variant="body1"
     >
       Reading Date: 
-      Wed Jan 01 2020
+      01/01/2020
     </WithStyles(ForwardRef(Typography))>
   </WithStyles(ForwardRef(Grid))>
   <WithStyles(ForwardRef(Grid))
