@@ -1,38 +1,38 @@
-import { classifyKidneyDisease, readings, getPercentageDrop } from '.'
+import { classifyKidneyDisease, eGFR, getPercentageDrop } from '.'
 
 describe('Kidney Disease Service', () => {
   it('should classifyKidneyDisease as normal', () => {
-    expect(classifyKidneyDisease(90)).toEqual(readings.NORMAL)
-    expect(classifyKidneyDisease(97)).toEqual(readings.NORMAL)
+    expect(classifyKidneyDisease(90)).toEqual(eGFR.NORMAL)
+    expect(classifyKidneyDisease(97)).toEqual(eGFR.NORMAL)
   })
 
   it('should classifyKidneyDisease as mildy decreased', () => {
-    expect(classifyKidneyDisease(89)).toEqual(readings.MILD_DECREASE)
-    expect(classifyKidneyDisease(60)).toEqual(readings.MILD_DECREASE)
-    expect(classifyKidneyDisease(77)).toEqual(readings.MILD_DECREASE)
+    expect(classifyKidneyDisease(89)).toEqual(eGFR.MILD_DECREASE)
+    expect(classifyKidneyDisease(60)).toEqual(eGFR.MILD_DECREASE)
+    expect(classifyKidneyDisease(77)).toEqual(eGFR.MILD_DECREASE)
   })
 
   it('should classifyKidneyDisease as mild to moderate', () => {
-    expect(classifyKidneyDisease(45)).toEqual(readings.MILD_TO_MODERATE)
-    expect(classifyKidneyDisease(50)).toEqual(readings.MILD_TO_MODERATE)
-    expect(classifyKidneyDisease(59)).toEqual(readings.MILD_TO_MODERATE)
+    expect(classifyKidneyDisease(45)).toEqual(eGFR.MILD_TO_MODERATE)
+    expect(classifyKidneyDisease(50)).toEqual(eGFR.MILD_TO_MODERATE)
+    expect(classifyKidneyDisease(59)).toEqual(eGFR.MILD_TO_MODERATE)
   })
 
   it('should classifyKidneyDisease as moderate to severe', () => {
-    expect(classifyKidneyDisease(30)).toEqual(readings.MODERATE_TO_SEVERE)
-    expect(classifyKidneyDisease(34)).toEqual(readings.MODERATE_TO_SEVERE)
-    expect(classifyKidneyDisease(44)).toEqual(readings.MODERATE_TO_SEVERE)
+    expect(classifyKidneyDisease(30)).toEqual(eGFR.MODERATE_TO_SEVERE)
+    expect(classifyKidneyDisease(34)).toEqual(eGFR.MODERATE_TO_SEVERE)
+    expect(classifyKidneyDisease(44)).toEqual(eGFR.MODERATE_TO_SEVERE)
   })
 
   it('should classifyKidneyDisease as severely decreased', () => {
-    expect(classifyKidneyDisease(15)).toEqual(readings.SEVERE_DECREASE)
-    expect(classifyKidneyDisease(20)).toEqual(readings.SEVERE_DECREASE)
-    expect(classifyKidneyDisease(29)).toEqual(readings.SEVERE_DECREASE)
+    expect(classifyKidneyDisease(15)).toEqual(eGFR.SEVERE_DECREASE)
+    expect(classifyKidneyDisease(20)).toEqual(eGFR.SEVERE_DECREASE)
+    expect(classifyKidneyDisease(29)).toEqual(eGFR.SEVERE_DECREASE)
   })
 
   it('should classifyKidneyDisease as severe (kidney failure)', () => {
-    expect(classifyKidneyDisease(14)).toEqual(readings.SEVERE)
-    expect(classifyKidneyDisease(0)).toEqual(readings.SEVERE)
+    expect(classifyKidneyDisease(14)).toEqual(eGFR.SEVERE)
+    expect(classifyKidneyDisease(0)).toEqual(eGFR.SEVERE)
   })
 
   it('should return the correct percentage drops', () => {

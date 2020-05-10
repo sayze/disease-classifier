@@ -1,9 +1,9 @@
 import Classification from '.'
 
 /**
- * Dictionary to keep track of all the possible classifications.
+ * Dictionary to keep track of all the possible eGFR classifications.
  */
-export const readings = Object.freeze({
+export const eGFR = Object.freeze({
   NORMAL: new Classification('kid-norm', 'Normal'),
   MILD_DECREASE: new Classification('kid-mild-dec', 'Mildly Decreased'),
   MILD_TO_MODERATE: new Classification('kid-mild-mod', 'Mild to Moderate'),
@@ -14,31 +14,31 @@ export const readings = Object.freeze({
 
 /**
  * Factory to derive the appropriate classification given egfr.
- * @param {number} eGFR
+ * @param {number} eGFRValue
  * @returns {Classification}
  */
-export function classifyKidneyDisease(eGFR = 0) {
-  if (eGFR >= 90) {
-    return readings.NORMAL
+export function classifyKidneyDisease(eGFRValue = 0) {
+  if (eGFRValue >= 90) {
+    return eGFR.NORMAL
   }
 
-  if (eGFR >= 60 && eGFR <= 89) {
-    return readings.MILD_DECREASE
+  if (eGFRValue >= 60 && eGFRValue <= 89) {
+    return eGFR.MILD_DECREASE
   }
 
-  if (eGFR >= 45 && eGFR <= 59) {
-    return readings.MILD_TO_MODERATE
+  if (eGFRValue >= 45 && eGFRValue <= 59) {
+    return eGFR.MILD_TO_MODERATE
   }
 
-  if (eGFR >= 30 && eGFR <= 44) {
-    return readings.MODERATE_TO_SEVERE
+  if (eGFRValue >= 30 && eGFRValue <= 44) {
+    return eGFR.MODERATE_TO_SEVERE
   }
 
-  if (eGFR >= 15 && eGFR <= 29) {
-    return readings.SEVERE_DECREASE
+  if (eGFRValue >= 15 && eGFRValue <= 29) {
+    return eGFR.SEVERE_DECREASE
   }
 
-  return readings.SEVERE
+  return eGFR.SEVERE
 }
 
 /**

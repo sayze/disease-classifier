@@ -2,21 +2,21 @@ import React, { useState } from 'react'
 import { Grid, Typography, Divider } from '@material-ui/core'
 import { Alert, AlertTitle } from '@material-ui/lab'
 import { Form, Summary } from '.'
-import { classifyKidneyDisease, readings, getPercentageDrop } from 'services/Classification'
+import { classifyKidneyDisease, eGFR, getPercentageDrop } from 'services/Classification'
 
 /**
  * Get the severity level using the provided KidneyDisease classification.
- * @param eGFR
+ * @param {eGFR} eGFRVal
  * @return {string}
  */
-const getSeverity = eGFR => {
-  switch (eGFR) {
-    case readings.MILD_DECREASE:
-    case readings.MILD_TO_MODERATE:
-    case readings.MODERATE_TO_SEVERE:
+const getSeverity = eGFRVal => {
+  switch (eGFRVal) {
+    case eGFR.MILD_DECREASE:
+    case eGFR.MILD_TO_MODERATE:
+    case eGFR.MODERATE_TO_SEVERE:
       return 'warning'
-    case readings.SEVERE_DECREASE:
-    case readings.SEVERE:
+    case eGFR.SEVERE_DECREASE:
+    case eGFR.SEVERE:
       return 'error'
     default:
       return 'success'
