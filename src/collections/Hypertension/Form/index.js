@@ -42,12 +42,12 @@ const Form = ({ onFormSubmit }) => {
             onChange={date => setFieldValue('date', date)}
             className={classes.inputField}
             value={values.date}
+            margin="condensed"
             label="Date of Reading"
           />
           <TextField
             fullWidth
             className={classes.inputField}
-            margin="normal"
             name="sysBp"
             variant="outlined"
             label="Systolic Blood Pressure"
@@ -59,7 +59,6 @@ const Form = ({ onFormSubmit }) => {
           <TextField
             fullWidth
             className={classes.inputField}
-            margin="normal"
             name="dialBp"
             variant="outlined"
             label="Diastolic Blood Pressure"

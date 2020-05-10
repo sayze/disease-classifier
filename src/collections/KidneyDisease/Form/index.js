@@ -40,10 +40,10 @@ const Form = ({ onFormSubmit }) => {
             className={classes.inputField}
             value={values.date}
             label="Date of Reading"
+            margin="condensed"
           />
           <TextField
             fullWidth
-            margin="normal"
             autoFocus
             className={classes.inputField}
             name="eGFR"
