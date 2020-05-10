@@ -5,6 +5,7 @@ exports[`Hypertension Form should render a default hypertension form 1`] = `
   enableReinitialize={false}
   initialValues={
     Object {
+      "date": 2020-05-10T08:31:33.906Z,
       "dialBp": 0,
       "sysBp": 0,
     }

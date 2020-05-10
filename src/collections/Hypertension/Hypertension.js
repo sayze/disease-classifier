@@ -26,7 +26,7 @@ const Hypertension = () => {
   const stage = classifyHypertension(bpValues.sysBp, bpValues.dialBp)
 
   const handleFormSubmit = values => {
-    setBpValues({ sysBp: Number(values.sysBp), dialBp: Number(values.dialBp), date: new Date() })
+    setBpValues({ sysBp: Number(values.sysBp), dialBp: Number(values.dialBp), date: values.date })
   }
 
   return (
