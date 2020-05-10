@@ -10,7 +10,7 @@ exports[`Datepicker should render default date picker 1`] = `
     <PickerWithState
       allowKeyboardControl={true}
       autoOk={true}
-      format="dd/MM/yyyy"
+      format="yyyy/MM/dd"
       helperText=" "
       inputVariant="outlined"
       invalidDateMessage="Invalid Date Format"
@@ -33,13 +33,13 @@ exports[`Datepicker should render default date picker 1`] = `
       <Wrapper
         DateInputProps={
           Object {
-            "inputValue": "10/05/2020",
+            "inputValue": "2020/05/10",
             "openPicker": [Function],
             "validationError": "",
           }
         }
         InputComponent={[Function]}
-        format="dd/MM/yyyy"
+        format="yyyy/MM/dd"
         helperText=" "
         inputVariant="outlined"
         label="Date picker inline"
@@ -55,13 +55,13 @@ exports[`Datepicker should render default date picker 1`] = `
         <InlineWrapper
           DateInputProps={
             Object {
-              "inputValue": "10/05/2020",
+              "inputValue": "2020/05/10",
               "openPicker": [Function],
               "validationError": "",
             }
           }
           InputComponent={[Function]}
-          format="dd/MM/yyyy"
+          format="yyyy/MM/dd"
           helperText=" "
           inputVariant="outlined"
           label="Date picker inline"
@@ -74,7 +74,7 @@ exports[`Datepicker should render default date picker 1`] = `
           props={Object {}}
         >
           <PureDateInput
-            format="dd/MM/yyyy"
+            format="yyyy/MM/dd"
             helperText=" "
             inputRef={
               Object {
@@ -83,11 +83,11 @@ exports[`Datepicker should render default date picker 1`] = `
                   class="MuiInputBase-input MuiOutlinedInput-input"
                   readonly=""
                   type="text"
-                  value="10/05/2020"
+                  value="2020/05/10"
                 />,
               }
             }
-            inputValue="10/05/2020"
+            inputValue="2020/05/10"
             inputVariant="outlined"
             label="Date picker inline"
             margin="normal"
@@ -102,7 +102,7 @@ exports[`Datepicker should render default date picker 1`] = `
                 }
               }
               error={false}
-              format="dd/MM/yyyy"
+              format="yyyy/MM/dd"
               helperText=" "
               inputRef={
                 Object {
@@ -111,7 +111,7 @@ exports[`Datepicker should render default date picker 1`] = `
                     class="MuiInputBase-input MuiOutlinedInput-input"
                     readonly=""
                     type="text"
-                    value="10/05/2020"
+                    value="2020/05/10"
                   />,
                 }
               }
@@ -120,7 +120,7 @@ exports[`Datepicker should render default date picker 1`] = `
               onClick={[Function]}
               onKeyDown={[Function]}
               props={Object {}}
-              value="10/05/2020"
+              value="2020/05/10"
               variant="outlined"
             >
               <ForwardRef(TextField)
@@ -135,7 +135,7 @@ exports[`Datepicker should render default date picker 1`] = `
                   }
                 }
                 error={false}
-                format="dd/MM/yyyy"
+                format="yyyy/MM/dd"
                 helperText=" "
                 inputRef={
                   Object {
@@ -144,7 +144,7 @@ exports[`Datepicker should render default date picker 1`] = `
                       class="MuiInputBase-input MuiOutlinedInput-input"
                       readonly=""
                       type="text"
-                      value="10/05/2020"
+                      value="2020/05/10"
                     />,
                   }
                 }
@@ -153,7 +153,7 @@ exports[`Datepicker should render default date picker 1`] = `
                 onClick={[Function]}
                 onKeyDown={[Function]}
                 props={Object {}}
-                value="10/05/2020"
+                value="2020/05/10"
                 variant="outlined"
               >
                 <WithStyles(ForwardRef(FormControl))
@@ -161,7 +161,7 @@ exports[`Datepicker should render default date picker 1`] = `
                   color="primary"
                   disabled={false}
                   error={false}
-                  format="dd/MM/yyyy"
+                  format="yyyy/MM/dd"
                   fullWidth={false}
                   margin="normal"
                   onClick={[Function]}
@@ -183,7 +183,7 @@ exports[`Datepicker should render default date picker 1`] = `
                     color="primary"
                     disabled={false}
                     error={false}
-                    format="dd/MM/yyyy"
+                    format="yyyy/MM/dd"
                     fullWidth={false}
                     margin="normal"
                     onClick={[Function]}
@@ -194,7 +194,7 @@ exports[`Datepicker should render default date picker 1`] = `
                   >
                     <div
                       className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal"
-                      format="dd/MM/yyyy"
+                      format="yyyy/MM/dd"
                       onClick={[Function]}
                       onKeyDown={[Function]}
                       props={Object {}}
@@ -267,7 +267,7 @@ exports[`Datepicker should render default date picker 1`] = `
                               class="MuiInputBase-input MuiOutlinedInput-input"
                               readonly=""
                               type="text"
-                              value="10/05/2020"
+                              value="2020/05/10"
                             />,
                           }
                         }
@@ -278,7 +278,7 @@ exports[`Datepicker should render default date picker 1`] = `
                         }
                         multiline={false}
                         readOnly={true}
-                        value="10/05/2020"
+                        value="2020/05/10"
                       >
                         <ForwardRef(OutlinedInput)
                           autoFocus={false}
@@ -309,7 +309,7 @@ exports[`Datepicker should render default date picker 1`] = `
                                 class="MuiInputBase-input MuiOutlinedInput-input"
                                 readonly=""
                                 type="text"
-                                value="10/05/2020"
+                                value="2020/05/10"
                               />,
                             }
                           }
@@ -320,7 +320,7 @@ exports[`Datepicker should render default date picker 1`] = `
                           }
                           multiline={false}
                           readOnly={true}
-                          value="10/05/2020"
+                          value="2020/05/10"
                         >
                           <WithStyles(ForwardRef(InputBase))
                             autoFocus={false}
@@ -352,7 +352,7 @@ exports[`Datepicker should render default date picker 1`] = `
                                   class="MuiInputBase-input MuiOutlinedInput-input"
                                   readonly=""
                                   type="text"
-                                  value="10/05/2020"
+                                  value="2020/05/10"
                                 />,
                               }
                             }
@@ -360,7 +360,7 @@ exports[`Datepicker should render default date picker 1`] = `
                             readOnly={true}
                             renderSuffix={[Function]}
                             type="text"
-                            value="10/05/2020"
+                            value="2020/05/10"
                           >
                             <ForwardRef(InputBase)
                               autoFocus={false}
@@ -395,7 +395,7 @@ exports[`Datepicker should render default date picker 1`] = `
                                     class="MuiInputBase-input MuiOutlinedInput-input"
                                     readonly=""
                                     type="text"
-                                    value="10/05/2020"
+                                    value="2020/05/10"
                                   />,
                                 }
                               }
@@ -403,7 +403,7 @@ exports[`Datepicker should render default date picker 1`] = `
                               readOnly={true}
                               renderSuffix={[Function]}
                               type="text"
-                              value="10/05/2020"
+                              value="2020/05/10"
                             >
                               <div
                                 className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl"
@@ -421,7 +421,7 @@ exports[`Datepicker should render default date picker 1`] = `
                                   readOnly={true}
                                   required={false}
                                   type="text"
-                                  value="10/05/2020"
+                                  value="2020/05/10"
                                 />
                                 <WithStyles(ForwardRef(NotchedOutline))
                                   className="MuiOutlinedInput-notchedOutline"

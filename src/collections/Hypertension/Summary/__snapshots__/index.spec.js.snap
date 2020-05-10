@@ -14,7 +14,7 @@ exports[`Hypertension Summary should render a valid hypertension summary 1`] = `
       variant="body1"
     >
       Reading Date: 
-      01/01/2020
+      2020/01/01
     </WithStyles(ForwardRef(Typography))>
   </WithStyles(ForwardRef(Grid))>
   <WithStyles(ForwardRef(Grid))

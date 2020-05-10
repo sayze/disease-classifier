@@ -9,7 +9,7 @@ const Datepicker = props => (
       autoOk
       helperText=" "
       variant="inline"
-      format="dd/MM/yyyy"
+      format="yyyy/MM/dd"
       inputVariant="outlined"
       margin="normal"
       label="Date picker inline"
