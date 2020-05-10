@@ -40,7 +40,7 @@ const Form = ({ onFormSubmit }) => {
             className={classes.inputField}
             value={values.date}
             label="Date of Reading"
-            margin="condensed"
+            margin="none"
           />
           <TextField
             fullWidth

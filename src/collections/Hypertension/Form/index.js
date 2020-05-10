@@ -42,7 +42,7 @@ const Form = ({ onFormSubmit }) => {
             onChange={date => setFieldValue('date', date)}
             className={classes.inputField}
             value={values.date}
-            margin="condensed"
+            margin="none"
             label="Date of Reading"
           />
           <TextField
