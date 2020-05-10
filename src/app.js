@@ -15,10 +15,8 @@ function App() {
 
   return (
     <MuiThemeProvider theme={baseTheme}>
-      <Grid container direction="column" spacing={4}>
-        <Grid item>
-          <NavBar />
-        </Grid>
+      <NavBar />
+      <div className="content">
         <Grid item container xs justify="center" spacing={4}>
           <Grid item xs md={3}>
             <Sidebar activeItem={currentDiseaseType} onItemChange={handleSidebarChange} />
@@ -27,7 +25,7 @@ function App() {
             {currentDiseaseType === menu.HYPERTENSION ? <Hypertension /> : <KidneyDisease />}
           </Grid>
         </Grid>
-      </Grid>
+      </div>
     </MuiThemeProvider>
   )
 }
