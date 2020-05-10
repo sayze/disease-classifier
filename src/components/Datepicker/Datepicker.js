@@ -7,6 +7,7 @@ const Datepicker = props => (
   <MuiPickersUtilsProvider utils={DateFnsUtils}>
     <DatePicker
       autoOk
+      helperText=" "
       variant="inline"
       format="dd/MM/yyyy"
       inputVariant="outlined"

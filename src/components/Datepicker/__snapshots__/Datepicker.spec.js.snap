@@ -11,6 +11,7 @@ exports[`Datepicker should render default date picker 1`] = `
       allowKeyboardControl={true}
       autoOk={true}
       format="dd/MM/yyyy"
+      helperText=" "
       inputVariant="outlined"
       invalidDateMessage="Invalid Date Format"
       label="Date picker inline"
@@ -39,6 +40,7 @@ exports[`Datepicker should render default date picker 1`] = `
         }
         InputComponent={[Function]}
         format="dd/MM/yyyy"
+        helperText=" "
         inputVariant="outlined"
         label="Date picker inline"
         margin="normal"
@@ -60,6 +62,7 @@ exports[`Datepicker should render default date picker 1`] = `
           }
           InputComponent={[Function]}
           format="dd/MM/yyyy"
+          helperText=" "
           inputVariant="outlined"
           label="Date picker inline"
           margin="normal"
@@ -72,6 +75,7 @@ exports[`Datepicker should render default date picker 1`] = `
         >
           <PureDateInput
             format="dd/MM/yyyy"
+            helperText=" "
             inputRef={
               Object {
                 "current": <input
@@ -99,7 +103,7 @@ exports[`Datepicker should render default date picker 1`] = `
               }
               error={false}
               format="dd/MM/yyyy"
-              helperText=""
+              helperText=" "
               inputRef={
                 Object {
                   "current": <input
@@ -132,7 +136,7 @@ exports[`Datepicker should render default date picker 1`] = `
                 }
                 error={false}
                 format="dd/MM/yyyy"
-                helperText=""
+                helperText=" "
                 inputRef={
                   Object {
                     "current": <input
@@ -466,6 +470,34 @@ exports[`Datepicker should render default date picker 1`] = `
                           </WithStyles(ForwardRef(InputBase))>
                         </ForwardRef(OutlinedInput)>
                       </WithStyles(ForwardRef(OutlinedInput))>
+                      <WithStyles(ForwardRef(FormHelperText))>
+                        <ForwardRef(FormHelperText)
+                          classes={
+                            Object {
+                              "contained": "MuiFormHelperText-contained",
+                              "disabled": "Mui-disabled",
+                              "error": "Mui-error",
+                              "filled": "MuiFormHelperText-filled",
+                              "focused": "Mui-focused",
+                              "marginDense": "MuiFormHelperText-marginDense",
+                              "required": "Mui-required",
+                              "root": "MuiFormHelperText-root",
+                            }
+                          }
+                        >
+                          <p
+                            className="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-filled"
+                          >
+                            <span
+                              dangerouslySetInnerHTML={
+                                Object {
+                                  "__html": "&#8203;",
+                                }
+                              }
+                            />
+                          </p>
+                        </ForwardRef(FormHelperText)>
+                      </WithStyles(ForwardRef(FormHelperText))>
                     </div>
                   </ForwardRef(FormControl)>
                 </WithStyles(ForwardRef(FormControl))>

@@ -7,8 +7,15 @@ import { makeStyles } from '@material-ui/core/styles'
 import Datepicker from 'components/Datepicker'
 
 const useStyles = makeStyles(theme => ({
+  inputs: {
+    display: 'flex',
+    justifyContent: 'space-between',
+  },
   inputField: {
     marginBottom: theme.spacing(3),
+  },
+  submit: {
+    float: 'right',
   },
 }))
 
@@ -29,38 +36,39 @@ const Form = ({ onFormSubmit }) => {
     >
       {({ errors, touched, values, handleChange, handleSubmit, setFieldValue }) => (
         <>
-          <Datepicker
-            fullWidth
-            autoFocus
-            name="date"
-            onChange={date => setFieldValue('date', date)}
-            className={classes.inputField}
-            value={values.date}
-            label="Date of Reading"
-          />
-          <TextField
-            fullWidth
-            className={classes.inputField}
-            name="sysBp"
-            variant="outlined"
-            label="Systolic Blood Pressure"
-            error={Boolean(touched.sysBp && errors.sysBp)}
-            helperText={errors.sysBp && touched.sysBp ? errors.sysBp : 'Number for Systolic Blood Pressure'}
-            onChange={handleChange}
-            defaultValue={values.sysBp}
-          />
-          <TextField
-            fullWidth
-            className={classes.inputField}
-            name="dialBp"
-            variant="outlined"
-            label="Diastolic Blood Pressure"
-            error={Boolean(touched.dialBp && errors.dialBp)}
-            helperText={errors.dialBp && touched.dialBp ? errors.dialBp : 'Number for Diastolic Blood Pressure'}
-            onChange={handleChange}
-            defaultValue={values.dialBp}
-          />
-          <Button variant="contained" onClick={handleSubmit} color="primary" fullWidth>
+          <div className={classes.inputs}>
+            <Datepicker
+              autoFocus
+              name="date"
+              onChange={date => setFieldValue('date', date)}
+              className={classes.inputField}
+              value={values.date}
+              label="Date of Reading"
+            />
+            <TextField
+              className={classes.inputField}
+              margin="normal"
+              name="sysBp"
+              variant="outlined"
+              label="Systolic Blood Pressure"
+              error={Boolean(touched.sysBp && errors.sysBp)}
+              helperText={errors.sysBp && touched.sysBp ? errors.sysBp : 'Number for Systolic Blood Pressure'}
+              onChange={handleChange}
+              defaultValue={values.sysBp}
+            />
+            <TextField
+              className={classes.inputField}
+              margin="normal"
+              name="dialBp"
+              variant="outlined"
+              label="Diastolic Blood Pressure"
+              error={Boolean(touched.dialBp && errors.dialBp)}
+              helperText={errors.dialBp && touched.dialBp ? errors.dialBp : 'Number for Diastolic Blood Pressure'}
+              onChange={handleChange}
+              defaultValue={values.dialBp}
+            />
+          </div>
+          <Button className={classes.submit} variant="contained" onClick={handleSubmit} color="primary">
             Classify
           </Button>
         </>
