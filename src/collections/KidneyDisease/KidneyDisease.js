@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Grid, Typography, Divider } from '@material-ui/core'
 import { Alert, AlertTitle } from '@material-ui/lab'
 import { Form, Summary } from '.'
-import { classify, readings, getPercentageDrop } from 'services/KidneyDisease'
+import { classifyKidneyDisease, readings, getPercentageDrop } from 'services/Classifications'
 
 /**
  * Get the severity level using the provided KidneyDisease classification.
@@ -29,7 +29,7 @@ const getSeverity = eGFR => {
  * @param {object} eGFRCurr
  */
 const renderSummary = (eGFRPrev = {}, eGFRCurr = {}) => {
-  const classification = classify(eGFRCurr.value)
+  const classification = classifyKidneyDisease(eGFRCurr.value)
   const percentDrop = getPercentageDrop(eGFRPrev.value, eGFRCurr.value)
   const title =
     percentDrop >= 20
