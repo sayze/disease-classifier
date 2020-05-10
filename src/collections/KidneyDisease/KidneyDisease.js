@@ -3,6 +3,7 @@ import { Grid, Typography, Divider } from '@material-ui/core'
 import { Alert, AlertTitle } from '@material-ui/lab'
 import { Form, Summary } from '.'
 import { classify, readings, getPercentageDrop } from 'services/KidneyDisease'
+import dateWithFormat from 'services/Date'
 
 /**
  * Get the severity level using the provided KidneyDisease classification.
@@ -56,14 +57,14 @@ const renderSummary = (eGFRPrev = {}, eGFRCurr = {}) => {
 
 const KidneyDisease = () => {
   const [eGFRPrev, seteGFRPrev] = useState({})
-  const [eGFRCurr, seteGFRCurr] = useState({})
+  const [eGFRCurr, seteGFRCurr] = useState({ date: dateWithFormat() })
 
   const handleFormSubmit = values => {
     const eGFRValue = Number(values.eGFR)
 
     // Update previous and current states.
     seteGFRPrev({ ...eGFRCurr })
-    seteGFRCurr({ value: eGFRValue, date: new Date().toDateString() })
+    seteGFRCurr({ value: eGFRValue, date: dateWithFormat() })
   }
 
   return (

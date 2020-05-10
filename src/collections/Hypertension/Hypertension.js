@@ -3,6 +3,7 @@ import { Grid, Typography } from '@material-ui/core'
 import { Alert, AlertTitle } from '@material-ui/lab'
 import { Form, Summary } from '.'
 import { stages, classify } from 'services/Hypertension'
+import dateWithFormat from 'services/Date'
 
 /**
  * Get the severity level using the provided hypertension stage.
@@ -22,11 +23,11 @@ const getSeverity = stage => {
 }
 
 const Hypertension = () => {
-  const [bpValues, setBpValues] = useState({ sysBp: 0, dialBp: 0 })
+  const [bpValues, setBpValues] = useState({ sysBp: 0, dialBp: 0, date: dateWithFormat() })
   const stage = classify(bpValues.sysBp, bpValues.dialBp)
 
   const handleFormSubmit = values => {
-    setBpValues({ sysBp: Number(values.sysBp), dialBp: Number(values.dialBp) })
+    setBpValues({ sysBp: Number(values.sysBp), dialBp: Number(values.dialBp), date: dateWithFormat() })
   }
 
   return (
