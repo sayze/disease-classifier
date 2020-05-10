@@ -1,5 +1,5 @@
 import React from 'react'
-import { Form as FormikForm, Formik } from 'formik'
+import { Formik } from 'formik'
 import * as Yup from 'yup'
 import { Button, TextField } from '@material-ui/core'
 import PropTypes from 'prop-types'
@@ -23,8 +23,8 @@ const Form = ({ onFormSubmit }) => {
       })}
       onSubmit={onFormSubmit}
     >
-      {({ errors, touched, values, handleChange }) => (
-        <FormikForm>
+      {({ errors, touched, values, handleChange, handleSubmit }) => (
+        <>
           <TextField
             fullWidth
             autoFocus
@@ -37,10 +37,10 @@ const Form = ({ onFormSubmit }) => {
             onChange={handleChange}
             defaultValue={values.eGFR}
           />
-          <Button variant="contained" type="submit" color="primary" fullWidth>
+          <Button variant="contained" onClick={handleSubmit} color="primary" fullWidth>
             Classify
           </Button>
-        </FormikForm>
+        </>
       )}
     </Formik>
   )

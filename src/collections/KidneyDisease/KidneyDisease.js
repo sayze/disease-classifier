@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
-import { Grid, Typography } from '@material-ui/core'
+import { Grid, Typography, Divider } from '@material-ui/core'
 import { Alert, AlertTitle } from '@material-ui/lab'
 import { Form, Summary } from '.'
-import { classify, readings } from 'services/KidneyDisease'
+import { classify, readings, getPercentageDrop } from 'services/KidneyDisease'
 
 /**
  * Get the severity level using the provided KidneyDisease classification.
@@ -23,12 +23,47 @@ const getSeverity = eGFR => {
   }
 }
 
+/**
+ * Helper to encapsulate logic for rendering a classification summary.
+ * @param {object} eGFRPrev
+ * @param {object} eGFRCurr
+ */
+const renderSummary = (eGFRPrev = {}, eGFRCurr = {}) => {
+  const classification = classify(eGFRCurr.value)
+  const percentDrop = getPercentageDrop(eGFRPrev.value, eGFRCurr.value)
+  const title =
+    percentDrop >= 20
+      ? `${classification.toString()} (current eGFR has declined 20% or more than the previous reading, refer to below readings)`
+      : classification.toString()
+
+  return (
+    <Grid item xs>
+      <Alert severity={getSeverity(classification)}>
+        <AlertTitle>{title}</AlertTitle>
+        <Summary date={eGFRCurr.date} percentage={percentDrop} eGFR={eGFRCurr.value} />
+        {percentDrop >= 20 && (
+          <>
+            <br />
+            <Divider light />
+            <br />
+            <Summary date={eGFRPrev.date} eGFR={eGFRPrev.value} />
+          </>
+        )}
+      </Alert>
+    </Grid>
+  )
+}
+
 const KidneyDisease = () => {
-  const [eGFRData, seteGFRData] = useState([])
+  const [eGFRPrev, seteGFRPrev] = useState({})
+  const [eGFRCurr, seteGFRCurr] = useState({})
 
   const handleFormSubmit = values => {
     const eGFRValue = Number(values.eGFR)
-    seteGFRData([...eGFRData, { eGFR: eGFRValue, date: new Date().toDateString(), percentage: 0 }])
+
+    // Update previous and current states.
+    seteGFRPrev({ ...eGFRCurr })
+    seteGFRCurr({ value: eGFRValue, date: new Date().toDateString() })
   }
 
   return (
@@ -42,17 +77,7 @@ const KidneyDisease = () => {
             Classification
           </Typography>
         </Grid>
-        {eGFRData.map(eGFRItem => {
-          const classification = classify(eGFRItem.eGFR)
-          return (
-            <Grid item xs>
-              <Alert severity={getSeverity(classification)}>
-                <AlertTitle>{classification.toString()}</AlertTitle>
-                <Summary date={eGFRItem.date} percentage={eGFRItem.percentage} eGFR={eGFRItem.eGFR} />
-              </Alert>
-            </Grid>
-          )
-        })}
+        {renderSummary(eGFRPrev, eGFRCurr)}
       </Grid>
     </Grid>
   )
